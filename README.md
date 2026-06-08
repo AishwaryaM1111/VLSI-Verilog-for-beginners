@@ -3,5 +3,5 @@ iam a PhD student who loves learning and reading... i have started basics of VLS
 
 - [x] VLSI Concepts
 - [x] Verilog Concepts
-- [ ] Tools
-      EDAPlayground, Vivado
+- [ ] Tools: 
+      EDAPlayground, Vivado Xilinks 
