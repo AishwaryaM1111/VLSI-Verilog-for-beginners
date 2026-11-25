@@ -1,1 +1,29 @@
+// Half adder (provided, do not modify)
+module ha(
+    input  a, b,
+    output sum, cout
+);
+    assign sum  = a ^ b;
+    assign cout = a & b;
+endmodule
 
+// YOUR CODE: build a 2-bit adder out of half adders
+module adder_2bit(
+    input  [1:0] a,
+    input  [1:0] b,
+    output [1:0] sum,
+    output       cout
+);
+
+    wire c0,temp_sum,c1,c2;
+    ha a1(.a(a[0]),.b(b[0]),.sum(sum[0]),.cout(c0));
+    ha a2(.a(a[1]),.b(b[1]),.sum(temp_sum),.cout(c1));
+     ha a3 (.a(temp_sum),.b(c0),.sum(sum[1]),.cout(c2));
+
+    assign cout = c1 | c2;
+    // Step 1: internal wires for the carry from bit 0 and the intermediate bit-1 results
+    // Step 2: half adder for bit 0
+    // Step 3: half adder for bit 1
+    // Step 4: add the bit-0 carry into bit 1 and merge the two carries
+    
+endmodule
