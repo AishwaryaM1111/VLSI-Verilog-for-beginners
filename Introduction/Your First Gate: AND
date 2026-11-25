@@ -1,1 +1,11 @@
+// AND gate: the output is 1 only when BOTH inputs are 1
+module my_and (
+    input  a, b,    // two input pins
+    output z        // one output pin
+);
+
+    // Your code here
+    assign z=a&b;
+
+endmodule
 
