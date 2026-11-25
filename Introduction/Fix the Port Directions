@@ -1,1 +1,7 @@
-
+// FIX THE PORT DIRECTIONS (leave the assign alone)
+module buffer(
+    output [7:0] data_out,   // BUG: wrong direction
+    input  [7:0] data_in   // BUG: wrong direction
+);
+    assign data_out = data_in;
+endmodule
