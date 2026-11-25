@@ -1,0 +1,12 @@
+module tb;
+
+    // An initial block runs once, at time 0, when the simulation starts.
+    initial begin
+
+        // Step 1: print the message with $display
+        $display("Hello World!");
+        // Step 2: stop the simulation with $finish
+        $finish;
+    end
+
+endmodule
