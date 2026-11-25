@@ -1,1 +1,21 @@
+// Provided: compares a with b. NOTE the order of the ports in the list.
+module cmp_cell (
+    input  b, a,
+    output lt, eq, gt
+);
+    assign lt = ~a & b;
+    assign eq = ~(a ^ b);
+    assign gt = a & ~b;
+endmodule
+
+module top (
+    input  x, y,
+    output x_lt_y, x_eq_y, x_gt_y
+);
+    cmp_cell c1(.a(x), .b(y), .lt(x_lt_y), .eq(x_eq_y), .gt(x_gt_y));
+    
+    
+    // Instantiate cmp_cell with NAMED connections so that x is compared against y.
+
+endmodule
 
