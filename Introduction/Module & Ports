@@ -1,1 +1,9 @@
+module my_wire (
+    input  y,     // data comes IN through this port
+    output z      // data goes OUT through this port
+);
+    
+    // Drive z from y with a continuous assignment.
+    assign z=y;
 
+endmodule
