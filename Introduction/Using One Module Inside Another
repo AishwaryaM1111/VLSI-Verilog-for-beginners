@@ -1,1 +1,25 @@
+// AND gate module (complete this first)
+module my_and (
+    input a, b,
+    output z
+);
+
+    // Implement the AND logic
+    assign z=a&b;
+endmodule
+
+
+// Top-level module that USES my_and
+module my_logic (
+    input a, b, c,
+    output z
+);
+
+    // Step 1: declare a wire to carry the AND result
+    wire k;
+    // Step 2: instantiate my_and and connect its ports
+    my_and m1(.a(a), .b(b), .z(k));
+    // Step 3: OR the AND result with c
+    assign z=k|c;
+endmodule
 
